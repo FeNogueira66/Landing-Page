@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel="icon" type="image/x-icon" href="./img/GGS.png">
+    <title>Landing Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/style.css'>
+</head>
+
+<body>
+    <header class="">
+        <div class="logo-nome">
+            <img class="header-img " src="./img/GGS.png" alt="">
+            <h1>GGStore</h1>
+        </div>
+
+        <nav class="header-nav">
+            <a class="direcionamento text-light" href="#produtos">Produtos</a>
+            <a class="direcionamento text-light" href="#sobre">Sobre</a>
+            <a class="direcionamento text-light" href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <div class="inicio">
+
+        <h1 class="texto-inicio">Geek</h1>
+        <h1 class="texto-inicio">Game</h1>
+        <h1 class="texto-inicio">Store</h1>
+
+    </div>
+
+    <!--     <div class="botoes row text-center">
+        <div class="col">
+            <a class="direcionamento" href="#produtos">Produtos</a>
+        </div>
+        <div class="col">
+            <a class="direcionamento" href="#sobre">Sobre</a>
+        </div>
+        <div class="col">
+            <a class="direcionamento" href="#3">Botão3</a>
+        </div>
+    </div> -->
+
+    <div id="produtos" class="bg-dark">
+
+        <h1>Produtos</h1>
+
+        <div class="container bg-dark">
+            <div class="card">
+                <img src="./img/foneGamer.webp" alt="Fone Gamer">
+                <h6 class="item-nome text-white">Fone Gamer</h6>
+                <p class="item-preco text-white">249,00</p>
+                <button class="btn-item" data-nome="Fone" data-preco="249.00">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card">
+                <img src="./img/tecladoGamer.webp" alt="Teclado Gamer">
+                <h6 class="item-nome text-white">Teclado Gamer</h6>
+                <p class="item-preco text-white">329,00</p>
+                <button class="btn-item" data-nome="Teclado" data-preco="329.00">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="card">
+                <img src="./img/plush.jpg" alt="Pelucia Lefty">
+                <h6 class="item-nome text-white">Pelucia Lefty</h6>
+                <p class="item-preco text-white">149,00</p>
+                <button class="btn-item" data-nome="Pelucia" data-preco="149.00">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+
+        <div class="finalizar">
+            <button type="button" class="btn-finalizar mb-5 bg-white" data-bs-toggle="modal" data-bs-target="#meuModal">
+                Finalizar Compra!
+            </button>
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="meuModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Finalizando Compra!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Deseja finalizar sua compra?</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick="finalizarCompra()">Finalizar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="sobre" class="mt-5">
+        <h1 class="sobre-titulo text-center fw-bold mb-5">Sobre nós</h1>
+        <p class="fs-2 px-5">
+            A <span class="text-danger fw-bold">G</span>eek <span class="text-danger fw-bold">G</span>ame
+            <span class="fw-bold text-danger">S</span>tore, é uma site de jogos e produtos gamers para todos aqueles que
+            amam
+            o
+            mundo dos jogos e desejam produtos de seus personagens e jogos favoritos e até para aqueles que querem
+            melhorar seus Setups.
+        </p>
+    </div>
+
+
+
+
+
+        <div class="div-contato col-12 col-md-8 col-lg-6" id="contato">
+
+            <div class="contato card bg-dark text-light border-danger p-4 shadow-lg">
+
+                <h2 class="text-center mb-4 text-uppercase fw-bold">
+                    Entre em Contato!
+                </h2>
+
+                <form class="needs-validation" novalidate>
+
+                    <div class="mb-3">
+                        <label for="nomeCliente" class="form-label fw-semibold">Nome Completo</label>
+                        <input type="text" class="form-control bg-secondary text-white border-dark" id="nomeCliente"
+                            placeholder="Digite seu nome" required>
+                        <div class="invalid-feedback text-danger">Por favor, insira seu nome.</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="emailCliente" class="form-label fw-semibold">E-mail de Contato</label>
+                        <input type="email" class="form-control bg-secondary text-white border-dark" id="emailCliente"
+                            placeholder="nome@exemplo.com" required>
+                        <div class="invalid-feedback text-danger">Por favor, insira um e-mail válido.</div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="mensagemCliente" class="form-label fw-semibold">Sua Mensagem</label>
+                        <textarea class="form-control bg-secondary text-white border-dark" id="mensagemCliente" rows="4"
+                            placeholder="Escreva aqui detalhes do que você precisa..." required></textarea>
+                        <div class="invalid-feedback text-danger">A mensagem não pode ficar vazia.</div>
+                    </div>
+
+                    <button class="btn btn-danger w-100 fw-bold text-uppercase py-2 view-btn" type="submit">
+                        Enviar Mensagem
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    <footer class="bg-dark">
+        <p class="texto-footer text-white fw-bold mt-3 ms-3">© 2026 Game Geek Store.Todos os direitos reservados à
+            Felipe</p>
+
+        <nav class="mt-3 me-3">
+            <a class="direcionamento-footer text-light" href="https://getbootstrap.com/">Bootstrap</a>
+            <a class="direcionamento-footer text-light" href="https://getbootstrap.com/">GitHub</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Script padrão do Bootstrap para impedir envios incorretos
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+    <script src='./js/script.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
